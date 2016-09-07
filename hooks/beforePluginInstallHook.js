@@ -147,10 +147,7 @@ module.exports = function (ctx) {
   }
 
   logStart();
-  var nodeModulesDir = './testfolder';
-  if (!fs.existsSync(nodeModulesDir)){
-    fs.mkdirSync(nodeModulesDir);
-  }
+  
   var modules = readDependenciesFromPackageJson(ctx);
   installRequiredNodeModules(modules);
 
